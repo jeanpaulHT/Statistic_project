@@ -1,0 +1,36 @@
+---
+title: "Py"
+output:
+  html_document: default
+  pdf_document: default
+---
+
+
+### _abrir librerias_
+
+```{r}
+library(readr)
+library(dplyr)
+```
+
+### _leer archivos_
+
+```{r}
+DF <- read_csv("./Material/survey_results_public.csv")
+```
+
+### Contenido
+
+Estaremos filtrando los datos de la siguiente manera:
+```{r}
+nDF = filter(DF, Country =="Peru")
+```
+
+Las variables son:
+```{r}
+colnames(DF)
+```
+
+El numero de observaron de variables son `r ncol(DF)` y el numero de observaciones es `r nrow(nDF)`
+
+
