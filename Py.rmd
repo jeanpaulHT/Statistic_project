@@ -5,21 +5,26 @@ output:
   pdf_document: default
 ---
 
-
-### _abrir librerias_
-
 ```{r}
 library(readr)
 library(dplyr)
 ```
 
-### _leer archivos_
+### _Tema 1: Tendencias tecnologicas_
+
+
+#### fuentes usadas:
+
+Estaremos usando la encuesta de _Stack Overflow Annual Developer Survey_ como
+fuente para nuestros datos.
 
 ```{r}
 DF <- read_csv("./Material/survey_results_public.csv")
 ```
 
-### Contenido
+El numero de observaron del dataframe filtrado es
+variables son `r ncol(DF)` y el numero de observaciones es `r nrow(DF)`:
+<br>
 
 Estaremos filtrando los datos de la siguiente manera:
 ```{r}
@@ -31,6 +36,7 @@ Las variables son:
 colnames(DF)
 ```
 
-El numero de observaron de variables son `r ncol(DF)` y el numero de observaciones es `r nrow(nDF)`
+El numero de observaron del dataframe filtrado es
+variables son `r ncol(DF)` y el numero de observaciones es `r nrow(nDF)`
 
 
